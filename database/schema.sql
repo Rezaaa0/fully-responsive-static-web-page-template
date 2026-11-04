@@ -1,0 +1,12 @@
+USE curtain_catalog;
+
+CREATE TABLE products (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    price DECIMAL(12, 2) NOT NULL DEFAULT 0,
+    stock INT UNSIGNED NOT NULL DEFAULT 0,
+    image VARCHAR(255),
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
